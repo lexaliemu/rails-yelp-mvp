@@ -1,0 +1,14 @@
+<h1>Restaurants listing</h1>
+<ul>
+  <% @restaurants.each do |resto| %>
+    <li>
+      <%= resto.name %>
+      <%= resto.address %>
+      <%= resto.phone_number %>
+      <%= resto.category %>
+      <%= link_to new_restaurant_review_path(resto), class: "navbar-wagon-item navbar-wagon-link" do%>
+        <i class="fas fa-plus"></i> Comment
+      <% end %>
+    </li>
+  <% end %>
+</ul>
